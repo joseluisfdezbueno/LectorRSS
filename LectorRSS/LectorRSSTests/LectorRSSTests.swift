@@ -2,7 +2,7 @@
 //  LectorRSSTests.swift
 //  LectorRSSTests
 //
-//  Created by prueba on 22/9/18.
+//  Created by José Luis Fernández Bueno on 22/9/18.
 //  Copyright © 2018 joseluisfdezbueno. All rights reserved.
 //
 

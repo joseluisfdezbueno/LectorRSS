@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  LectorRSS
 //
-//  Created by prueba on 22/9/18.
+//  Created by José Luis Fernández Bueno on 22/9/18.
 //  Copyright © 2018 joseluisfdezbueno. All rights reserved.
 //
 
@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let mainFrame = UIScreen.main.bounds
+        window = UIWindow(frame: mainFrame)
+        window?.rootViewController = UINavigationController(rootViewController: NewsListModule.view)
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

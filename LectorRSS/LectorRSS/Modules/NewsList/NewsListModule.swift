@@ -7,3 +7,25 @@
 //
 
 import Foundation
+
+class NewsListModule {
+    
+    static var view: NewsListViewController {
+        let view = NewsListViewController(nibName: "NewsListViewController", bundle: nil)
+        view.presenter = NewsListPresenter(view: view)
+        
+        return view
+    }
+    
+}
+
+extension NewsListModule {
+    
+    /// Texts to translate in the future
+
+    enum Localizable {
+        static let titleNavBar = "Noticias de Eol"
+        static let placeholderSearchBar = "Busca por título..."
+    }
+    
+}
