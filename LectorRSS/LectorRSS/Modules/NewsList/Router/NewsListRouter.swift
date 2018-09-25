@@ -27,6 +27,7 @@ extension NewsListRouter: NewsListRouterProtocol {
     
     func pushNewsDetail(news: News) {
         let newsDetailView = NewsDetailModule.view(news: news)
+        view?.navigationItem.title = NewsListModule.Localizable.backButtonNavBar
         view?.navigationController?.pushViewController(newsDetailView, animated: true)
     }
 

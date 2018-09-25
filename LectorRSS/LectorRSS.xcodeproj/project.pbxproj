@@ -14,6 +14,7 @@
 		6F5851E0215AC4680019853C /* NewsDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5851DF215AC4680019853C /* NewsDetailRouter.swift */; };
 		6F5851E2215AC4780019853C /* NewsDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5851E1215AC4780019853C /* NewsDetailPresenter.swift */; };
 		6F5851E7215AC4D50019853C /* NewsDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5851E6215AC4D50019853C /* NewsDetailProtocols.swift */; };
+		6F5851E9215AD6B00019853C /* NewsDetailViewController+IBActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5851E8215AD6B00019853C /* NewsDetailViewController+IBActions.swift */; };
 		6F8CB59E2156AD0A00160F58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8CB59D2156AD0A00160F58 /* AppDelegate.swift */; };
 		6F8CB5A62156AD0A00160F58 /* LectorRSS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6F8CB5A42156AD0A00160F58 /* LectorRSS.xcdatamodeld */; };
 		6F8CB5A82156AD0A00160F58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F8CB5A72156AD0A00160F58 /* Assets.xcassets */; };
@@ -131,6 +132,7 @@
 		6F5851DF215AC4680019853C /* NewsDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailRouter.swift; sourceTree = "<group>"; };
 		6F5851E1215AC4780019853C /* NewsDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailPresenter.swift; sourceTree = "<group>"; };
 		6F5851E6215AC4D50019853C /* NewsDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailProtocols.swift; sourceTree = "<group>"; };
+		6F5851E8215AD6B00019853C /* NewsDetailViewController+IBActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsDetailViewController+IBActions.swift"; sourceTree = "<group>"; };
 		6F8CB59A2156AD0A00160F58 /* LectorRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LectorRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F8CB59D2156AD0A00160F58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F8CB5A52156AD0A00160F58 /* LectorRSS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LectorRSS.xcdatamodel; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 			children = (
 				6F5851DB215AC44E0019853C /* NewsDetailViewController.swift */,
 				6F5851DC215AC44E0019853C /* NewsDetailViewController.xib */,
+				6F5851E8215AD6B00019853C /* NewsDetailViewController+IBActions.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				6F8CB5F32157C32E00160F58 /* NewsListTableViewCell.swift in Sources */,
 				6F5851E7215AC4D50019853C /* NewsDetailProtocols.swift in Sources */,
 				6F8CB5F02156D75B00160F58 /* News.swift in Sources */,
+				6F5851E9215AD6B00019853C /* NewsDetailViewController+IBActions.swift in Sources */,
 				6F8CB5E22156B55000160F58 /* NewsDetailModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

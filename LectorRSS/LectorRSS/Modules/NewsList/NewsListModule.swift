@@ -6,7 +6,7 @@
 //  Copyright © 2018 joseluisfdezbueno. All rights reserved.
 //
 
-class NewsListModule {
+final class NewsListModule {
     
     static var view: NewsListViewController {
         let view = NewsListViewController(nibName: "NewsListViewController", bundle: nil)
@@ -23,6 +23,7 @@ extension NewsListModule {
 
     enum Localizable {
         static let titleNavBar = "Noticias de Eol"
+        static let backButtonNavBar = "Atrás"
         static let placeholderSearchBar = "Busca por título..."
     }
     

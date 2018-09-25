@@ -8,12 +8,13 @@
 
 import UIKit
 
-class NewsListViewController: UIViewController {
+final class NewsListViewController: UIViewController {
 
     @IBOutlet weak private var newsTableView: UITableView!
     @IBOutlet weak private var newsSearchBar: UISearchBar!
     
     var presenter: NewsListPresenterProtocol!
+    
     var news: [News] = [] {
         didSet {
             newsTableView.reloadData()
@@ -47,7 +48,7 @@ extension NewsListViewController {
     /// Sets the default style of the navigation bar
     
      private func setNavigationBar() {
-        //navigationController?.navigationBar.tintColor = GenericColor.primaryGreen
+        navigationController?.navigationBar.tintColor = GenericColor.primaryGreen
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: GenericColor.primaryGreen]
         navigationController?.navigationBar.barTintColor = GenericColor.primaryGray
         
@@ -62,7 +63,7 @@ extension NewsListViewController {
     
 }
 
-// MARK: - NewsListRouterProtocol´s Implementation
+// MARK: - NewsListViewProtocol´s Implementation
 
 extension NewsListViewController: NewsListViewControllerProtocol {
     

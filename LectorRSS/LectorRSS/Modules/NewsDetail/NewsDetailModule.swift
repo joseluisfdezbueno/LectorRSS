@@ -6,11 +6,11 @@
 //  Copyright © 2018 joseluisfdezbueno. All rights reserved.
 //
 
-class NewsDetailModule {
+final class NewsDetailModule {
     
     static func view(news: News) -> NewsDetailViewController {
         let view = NewsDetailViewController(nibName: "NewsDetailViewController", bundle: nil)
-     //   view.presenter = NewsListPresenter(view: view)
+        view.presenter = NewsDetailPresenter(view: view, news: news)
         
         return view
     }
@@ -22,8 +22,7 @@ extension NewsDetailModule {
     /// Texts to translate in the future
     
     enum Localizable {
-        static let titleNavBar = "Noticias de Eol"
-        static let placeholderSearchBar = "Busca por título..."
+        static let openWebButton = "Visitar noticia"
     }
     
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2018 joseluisfdezbueno. All rights reserved.
 //
 
-class NewsListPresenter {
+final class NewsListPresenter {
     
     weak var view: NewsListViewControllerProtocol?
     private var router: NewsListRouterProtocol!
@@ -50,7 +50,6 @@ extension NewsListPresenter: NewsListPresenterProtocol {
     ///     - selectedNews: selected news to show details
     
     func newsWasSelected(selectedNews: News) {
-        //view?.navigationItem.title = "atras"
         router.pushNewsDetail(news: selectedNews)
     }
     

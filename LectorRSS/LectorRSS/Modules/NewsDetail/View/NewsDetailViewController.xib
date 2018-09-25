@@ -1,13 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailViewController" customModule="LectorRSS" customModuleProvider="target">
             <connections>
+                <outlet property="newsDescriptionTextView" destination="kGU-Zb-OJt" id="pVb-vF-GrD"/>
+                <outlet property="newsImageView" destination="HFL-r1-JHT" id="MNc-8S-p69"/>
+                <outlet property="newsTitleLabel" destination="azA-aS-kLK" id="mSF-6N-Rdq"/>
+                <outlet property="openWebButton" destination="BHn-J7-1pQ" id="78q-He-sr7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +24,57 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ejemplo" translatesAutoresizingMaskIntoConstraints="NO" id="HFL-r1-JHT">
+                    <rect key="frame" x="0.0" y="77" width="375" height="213"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="HFL-r1-JHT" secondAttribute="height" multiplier="125:71" id="cVQ-nI-tRU"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azA-aS-kLK">
+                    <rect key="frame" x="170.5" y="35" width="34" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kGU-Zb-OJt">
+                    <rect key="frame" x="23" y="315" width="329" height="266"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHn-J7-1pQ">
+                    <rect key="frame" x="141.5" y="599" width="93" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="93" id="hbs-a8-q52"/>
+                        <constraint firstAttribute="height" constant="30" id="p1A-CA-CB2"/>
+                    </constraints>
+                    <state key="normal" title="Visitar Noticia Original"/>
+                    <connections>
+                        <action selector="pressOpenWebButton" destination="-1" eventType="touchUpInside" id="Gg4-P0-y6e"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HFL-r1-JHT" firstAttribute="top" secondItem="azA-aS-kLK" secondAttribute="bottom" constant="21" id="2bO-f6-Sjd"/>
+                <constraint firstItem="kGU-Zb-OJt" firstAttribute="top" secondItem="HFL-r1-JHT" secondAttribute="bottom" constant="25" id="3yT-jj-7aG"/>
+                <constraint firstItem="BHn-J7-1pQ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="GQL-aH-7uP"/>
+                <constraint firstItem="kGU-Zb-OJt" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Ghl-qH-3rK"/>
+                <constraint firstItem="HFL-r1-JHT" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="KUS-ka-Nd6"/>
+                <constraint firstItem="azA-aS-kLK" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="On1-uM-7fC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kGU-Zb-OJt" secondAttribute="trailing" constant="23" id="UIm-dC-oPT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BHn-J7-1pQ" secondAttribute="bottom" constant="38" id="UPO-6a-ilB"/>
+                <constraint firstItem="azA-aS-kLK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="Y47-Ih-vZE"/>
+                <constraint firstItem="BHn-J7-1pQ" firstAttribute="top" secondItem="kGU-Zb-OJt" secondAttribute="bottom" constant="18" id="dSj-bH-vbd"/>
+                <constraint firstItem="HFL-r1-JHT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tTm-Gu-RgZ"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="59.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="ejemplo" width="400" height="400"/>
+    </resources>
 </document>

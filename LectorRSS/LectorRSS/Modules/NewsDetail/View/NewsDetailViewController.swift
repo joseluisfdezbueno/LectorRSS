@@ -8,28 +8,62 @@
 
 import UIKit
 
-class NewsDetailViewController: UIViewController {
+import UIKit
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+final class NewsDetailViewController: UIViewController {
+    
+    @IBOutlet weak private var newsImageView: UIImageView!
+    @IBOutlet weak private var newsTitleLabel: UILabel!
+    @IBOutlet weak private var newsDescriptionTextView: UITextView!
+    @IBOutlet weak private var openWebButton: UIButton!
+    
+    var presenter: NewsDetailPresenterProtocol!
+    
+    private var news: News! {
+        didSet {
+            newsTitleLabel.text = news.title
+            newsDescriptionTextView.text = news.description
+            //newsImageView.image = news.image
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        presenter.viewDidLoad()
     }
-    */
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setTexts()
+    }
+    
+}
 
+// MARK: - Private methods
+
+extension NewsDetailViewController {
+    
+    /// Sets the default text of view elements
+
+    private func setTexts() {
+        openWebButton.setTitle(NewsDetailModule.Localizable.openWebButton, for: .normal)
+    }
+    
+}
+
+// MARK: - NewsDetailViewProtocol´s Implementation
+
+extension NewsDetailViewController: NewsDetailViewControllerProtocol {
+    
+    /// Sets news in the view
+    ///
+    /// - Parameters:
+    ///     - news: news to display
+    
+    func setNews(_ news: News) {
+        self.news = news
+    }
+    
 }
