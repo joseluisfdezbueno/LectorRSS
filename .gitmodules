@@ -1,0 +1,3 @@
+[submodule "LectorRSS/Alamofire"]
+	path = LectorRSS/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git

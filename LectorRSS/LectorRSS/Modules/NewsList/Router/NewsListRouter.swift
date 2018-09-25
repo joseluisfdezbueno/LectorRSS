@@ -8,9 +8,9 @@
 
 final class NewsListRouter {
     
-    weak private var view: NewsListViewControllerProtocol?
+    weak private var view: NewsListViewController?
     
-    init(view: NewsListViewControllerProtocol?) {
+    init(view: NewsListViewController?) {
         self.view = view
     }
     
@@ -26,7 +26,8 @@ extension NewsListRouter: NewsListRouterProtocol {
     ///     - news: news to show details in "NewsDetail" view
     
     func pushNewsDetail(news: News) {
-        
+        let newsDetailView = NewsDetailModule.view(news: news)
+        view?.navigationController?.pushViewController(newsDetailView, animated: true)
     }
 
 }

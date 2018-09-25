@@ -1,8 +1,8 @@
 //
-//  NewDetailModule.swift
+//  NewsDetailPresenter.swift
 //  LectorRSS
 //
-//  Created by José Luis Fernández Bueno on 22/9/18.
+//  Created by José Luis Fernández Bueno on 25/9/18.
 //  Copyright © 2018 joseluisfdezbueno. All rights reserved.
 //
 
