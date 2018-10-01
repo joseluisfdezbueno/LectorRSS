@@ -36,7 +36,9 @@ extension NewsDetailPresenter: NewsDetailPresenterProtocol {
     /// Open the web of the news
     
     func openNewsWeb() {
-        router.presentNewsWeb(url: news.webUrl)
+        if let webUrl = news.webUrl {
+            router.presentNewsWeb(url: webUrl)
+        }
     }
     
 }

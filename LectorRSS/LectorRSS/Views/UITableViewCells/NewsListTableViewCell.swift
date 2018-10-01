@@ -17,13 +17,20 @@ class NewsListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        newsTitleLabel.text = nil;
-        newsDescriptionLabel.text = nil;
+        newsTitleLabel.text = nil
+        newsDescriptionLabel.text = nil
+        
+        newsImageView.image = nil
+        newsImageView.setRoundImageStyle()
     }
         
     func bind(news: News) {
         newsTitleLabel.text = news.title
-        newsDescriptionLabel.text = news.description
+        newsDescriptionLabel.text = news.body
+        
+        if let imageData = news.image {
+            newsImageView.image = UIImage(data: imageData)
+        }
     }
     
 }

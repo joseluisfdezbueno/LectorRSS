@@ -60,7 +60,7 @@ extension NewsListPresenter: NewsListPresenterProtocol {
     
     func filterNewsByTitle(searchText: String) {
         let filteredNews = news.filter({ (auxNews) -> Bool in
-            if auxNews.title.lowercased().contains(searchText.lowercased()) {
+            if let isContained = auxNews.title?.lowercased().contains(searchText.lowercased()), isContained {
                 return true
             } else {
                 return false

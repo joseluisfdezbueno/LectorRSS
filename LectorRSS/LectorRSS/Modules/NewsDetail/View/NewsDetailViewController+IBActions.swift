@@ -2,7 +2,7 @@
 //  NewsDetailViewController+IBActions.swift
 //  LectorRSS
 //
-//  Created by prueba on 25/9/18.
+//  Created by José Luis Fernández Bueno on 25/9/18.
 //  Copyright © 2018 joseluisfdezbueno. All rights reserved.
 //
 

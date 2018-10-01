@@ -21,9 +21,11 @@ final class NewsDetailViewController: UIViewController {
     
     private var news: News! {
         didSet {
-            newsTitleLabel.text = news.title
-            newsDescriptionTextView.text = news.description
-            //newsImageView.image = news.image
+            newsTitleLabel.text = news.title ?? ""
+            newsDescriptionTextView.text = news.body ?? ""
+            if let imageData = news.image {
+                newsImageView.image = UIImage(data: imageData)
+            }
         }
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 final class NewsListViewController: UIViewController {
 
@@ -14,7 +15,7 @@ final class NewsListViewController: UIViewController {
     @IBOutlet weak private var newsSearchBar: UISearchBar!
     
     var presenter: NewsListPresenterProtocol!
-    
+
     var news: [News] = [] {
         didSet {
             newsTableView.reloadData()
@@ -27,6 +28,8 @@ final class NewsListViewController: UIViewController {
         newsTableView.dataSource = self
         newsTableView.delegate = self
         newsTableView.register(UINib(nibName: "NewsListTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsListCell")
+        newsTableView.tableFooterView = UIView()
+        
         newsSearchBar.delegate = self
         
         presenter.viewDidLoad()
